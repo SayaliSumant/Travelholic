@@ -1,0 +1,329 @@
+/*For Heading and bg-image on every page*/
+/*Responsive container*/
+@media (min-aspect-ratio: 16/9){
+    .container{
+        text-align: center;
+        justify-content:space-around;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .container{
+        text-align: center;
+        justify-content: last baseline;
+    }
+}   
+/*Responsive container content*/
+.container h1{
+    font-size: 65px;
+    color:antiquewhite;
+    font-weight: 600;
+    margin-top: 15%;
+}
+.container h1:hover{
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+}
+.container a{
+    text-decoration: none;
+    display: inline-block;
+    color:aliceblue;
+    font-size: 24px;
+    border: 2px solid aliceblue;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+.container a:hover{
+    background-color: rgb(148, 157, 135);
+    color: black;
+    font-size: x-large;
+    font-weight:bolder;
+}
+.container>.bgVideo{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 75%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    margin: 6% auto;
+    
+}
+
+/*Footer Section*/
+footer {
+    background-color: #333;
+    color:blanchedalmond;
+    text-align: center;
+    width: 99%;
+    padding: 1em 0;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position:relative;
+}
+footer ul{
+    list-style-type: none;
+    float: left;
+    margin-left: 7%;
+}
+footer ul a{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+footer div{
+    margin-left: 40%;
+    margin-top: 2%;
+    margin-right: 10%;
+}
+footer div>a:hover, ul>li>a:hover{
+    color: #e84118;
+}
+footer p{
+    margin-top: 3%;
+    letter-spacing: 5px;
+}
+
+/*Login Box*/
+.loginForm {
+    width: 80%;
+    height: 50%;
+    margin-left: 150px;
+    background-color: aqua;
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 45px;
+}
+.loginForm > ul{
+    width: 90%;
+    float: left;
+    background-color: aqua;
+    list-style-type: none;
+}
+.loginForm > img {
+    width: 35%;
+    height: fit-content;
+    float: left;
+}
+.loginContent >li >h1 h3{
+    margin-left: 5%;
+}
+.loginContent >.eText {
+    background: white;
+    height: 40px;
+    width: 40%;
+}
+.loginContent >li >input {
+    border: none;
+    background: none;
+    background-color: white;
+    outline: none;
+    width: 80%;
+    padding: 0 6px;
+    line-height: 40px;
+    text-align: left;
+
+}
+.loginContent >li >a {
+    color:white;
+    background-color: rgb(35, 95, 169);
+    border-radius: 40%;
+    padding: 12px;
+    text-decoration: none;
+    font-family:'Lucida Sans';
+    font-weight: bold;
+    position:relative;
+}
+.loginContent >li >a:hover {
+    background-color: blue;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+
+/*Budget Page*/
+/*Input Form*/
+#budget-form{
+    border:1px solid;
+    width: 50%;
+    margin-top: 40px;
+    margin-left: 25%;
+    background-color:beige;
+    margin-bottom: 25px;
+}
+#budget-form select{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 65%;
+    height:25px;
+}
+#budget-form label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:300;
+    top: 50px;
+    color: #333;
+}
+#budget-form input{
+    width: 75%;
+    height:25px;
+    margin-bottom: 50px;
+}
+#budget-form button{
+    width: 15%;
+    height: 10%;
+    background-color: antiquewhite;
+    color: #333;
+    font-size: larger;
+    margin-bottom: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Output Budget Result*/
+#budget-result{
+    border: solid 2px #333;
+    border-radius: 5%;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 70px;
+    width: 70%;
+    margin-left: 15%;
+    background-color: blanchedalmond;
+    display: none;
+}
+
+/*Contact Page*/
+.contactPage{
+    text-align: center;
+    margin-top: 5%;
+}
+.contactPage h2{
+    color: #e84118;
+    font-size: xx-large;
+    /*margin-top: 15%;*/
+    padding-top: 10%;
+}
+.contactPage h3{
+    display: flex;
+    font-size: x-large;
+}
+.contactPage h3:before, h3:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+.contactPage h3:before{
+    margin-right: 10px;
+}
+.contactPage h3:after{
+    margin-left: 10px;
+}
+.contactForm{
+    border:1px solid;
+    width: 50%;
+    margin-top: 70px;
+    margin-left: 25%;
+    background-color:beige;
+    margin-bottom: 25px;
+}
+.contactForm label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:300;
+    top: 50px;
+    color: #333;
+}
+.contactForm input{
+    width: 75%;
+    height:25px;
+    margin-bottom: 50px;
+}
+.contactForm textarea{
+    width: 75%; 
+    margin-bottom: 50px; 
+}
+.contactForm button{
+    width: 15%;
+    height: 10%;
+    background-color: antiquewhite;
+    color: #333;
+    font-size: larger;
+    margin-bottom: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.contactForm p{
+    border: green solid 2px;
+    margin-bottom: 25px;
+    margin-left: 18%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 65%;
+    display: none;
+    padding: 3px;
+}
+
+
+/*About Us page*/
+.about{
+    margin-top: 15%;
+    padding: 15%;
+    padding-top: 0;
+    padding-bottom: 5%;
+}
+.about p{
+    font-size: larger;
+}
+
+/*For Country & Destinations Pages*/
+.country {
+    align-items: center;
+    text-align: center;
+    padding-top: 5%;
+}
+.country >img{
+    position:relative;
+    display: flex;
+    width: 60%;
+    margin-top: 250px;
+    z-index: -1;
+    margin-left: 250px;
+    margin: 115px auto 25px;
+}
+.country >h2 {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 10px;
+    position: relative;
+}
+.country >p {
+    width: 60%;
+    text-align:left;
+    margin: 0 auto;
+    font-size: large;
+}
+
+/*List of Contents*/
+.content {
+    border: solid 1px #333;
+    width: 60%;
+    background-color: blanchedalmond;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    text-align: left;
+    margin-top: 10px;
+}
+.content h3 {
+    margin-left: 15px;
+}
+.content ol {
+    text-align: left;
+    list-style-position: inside;
+    margin-left: 15px;
+}
+.content ol ul {
+    list-style-position: inside;
+    margin-left: 30px;
+}
+.content a {
+    text-decoration: none;
+    color: #e84118;
+    list-style-type: square;
+    margin-bottom: 30px;
+}

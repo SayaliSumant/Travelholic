@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+
+    <title>About us &bull; Travelholic</title>
+    <!--link rel="icon" href="logo.png" type="image/icon type"-->
+</head>
+<body>
+
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Heading-->
+<div class="container">
+        <h1 style="color: black;">Make Memories</h1>
+        <h3 style="color: black;">With your ultimate travel companion</h3>
+        <img src="contact.jpg" style="height: 55%;" class="bgVideo">
+</div>
+
+<!--Info-->    
+<div class="about">
+        <p><b>At Travelholic, we believe in the transformative power of travel. Our mission is to
+             inspire, inform, and guide fellow explorers in their quest to explore the 
+             world's wonders. Whether you're a seasoned traveler or embarking on your first 
+             adventure, we're here to be your trusted companion on the journey.our platform is 
+             dedicated to providing you with the most insightful, carefully selected information
+             about destinations, accommodations, and culinary delights around the world.</b></p>
+
+        <h2>Unforgettable travel experiences</h2>
+        <p>Unforgettable travel experiences
+            No matter where your travels take you, Travelholic Guide offers the best way to 
+            connect with your destination. Make memories all over the globe. From must-see 
+            iconic attractions to unexpected under-the-radar gems, we have something for 
+            everyone.</p>
+        
+        <h2>Our Commitment</h2>    
+        <p><b>&bull; Accuracy and Reliability:</b><br> We strive for accuracy in every piece of information
+             we provide, ensuring that your travel plans are based on reliable and up-to-date 
+             details.<br>
+           <b>&bull;Exclusive Insights:</b><br> Explore destinations with a fresh perspective, 
+           guided by detailed insights. 
+        </p> 
+        
+        <h2>What Sets Us Apart</h2>
+        <p><b>&bull; Admin's Personal Touch:</b><br>
+            Travelholic brings a personal touch to every travel recommendation, sharing exclusive
+             insights and personal experiences to help you make the most of your journeys.<br>
+            <b>&bull; Expert Curation:</b><br>
+            Benefit from the expertise of a seasoned traveler. Every destination featured on 
+            Travelholic is carefully selected to ensure a unique and memorable travel 
+            experience.<br>
+            <b>&bull; Tailored Recommendations:</b><br>
+            Whether you seek luxurious getaways or budget-friendly adventures, Travelholic 
+            tailors recommendations to suit various preferences, ensuring a personalized travel 
+            guide just for you.
+        </p>
+</div>
+
+<!--Login box-->
+<div class="loginForm" align="center" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"><input type="email" id="eid" placeholder="Email">
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div>
+
+<!--Footer Section-->    
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

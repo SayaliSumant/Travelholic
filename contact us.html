@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="style2.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+    <title>Contact &bull; Travelholic</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+
+<body>
+
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Heading-->
+<div class="container">
+        <h1 style="color:black;">Contact</h1>
+        <h2>Send us your questions, comments or suggestions!!</h2>
+        <img src="contact.jpg" style="height: 55%;" class="bgVideo">
+</div>
+
+<!--Contact Form-->
+<div class="contactPage" id="contact">
+        <h2>GET IN TOUCH</h2>
+        <h3>Contact Form</h3>
+        <p><b> Send us your questions,comments or suggestions!! You can contact us using the form 
+            below.</b></p>
+        <p><b>To know more about us <a href="./about us.html">click here!</a></b></p>
+
+        <form class="contactForm">
+            <br><br>
+            <label for="name">Your Name</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Your E-mail</label><br>
+            <input type="email" id="email" name="email" required><br> 
+            <label for="subject">Subject</label><br>
+            <input type="text" id="subject" name="subject" required><br> 
+            <label for="msg">Your Message</label><br>
+            <textarea id="msg" rows="5" name="msg" required></textarea><br>
+            <button type="button" onclick="validateForm()">Submit</button> 
+            <p id="submitMsg" align="center"><b>Thank you for your message.<br> It has been sent!!</b></p>
+        </form>
+</div>
+
+<!--Login Box-->
+<div class="loginForm" align="center" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"> <input type="email" id="eid" placeholder="Email" required> 
+            
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div>
+
+<!--Footer section-->
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

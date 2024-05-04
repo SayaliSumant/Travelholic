@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+
+    <title>Destinations &bull; India</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+
+<body>
+    
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Info-->
+<div class="country">
+    <img src="https://wallpapercave.com/wp/wp2664194.jpg">
+    <h2>Best Trails in Maharashtra (India)</h2>
+    <p>Ready to check out the best trails in Maharashtra for hiking, mountain biking, climbing or other outdoor activities? AllTrails has 654 hiking trails, mountain biking routes, backpacking trips and more. Discover hand-curated trail maps, along with reviews and photos from nature lovers like you.</p><br>
+    <p>No matter what you're looking for, you can find a diverse range of the best hiking trails in Maharashtra to suit your needs.</p><br>
+</div>
+
+<!--List of Hikes-->
+<div id="trekList">
+<div style="display: flex; flex-direction: row; margin-top: 4%;" align="center">
+    <div class="card" style="margin-left: 13%; cursor: pointer;">
+        <a onclick="displayTrek(1)" style="text-decoration: none; color: black;">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/92/14/2b/caption.jpg?w=1200&h=-1&s=1" style="width: 300px">
+        <h3> Sinhgad Fort <br></h3>
+        <hr color="#e84118;">
+        <p align="center"> Level : Hard <br> Length : 8.0 km <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.8(226) <br> </p>
+        <a align="center" style="color: #e84118;">
+            Read more &raquo; </a>
+        </a>    
+    </div>
+    <div class="card" style="margin-left: 3%; cursor: pointer;">
+        <a onclick="displayTrek(2)" style="text-decoration: none; color: black;">
+        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjkzMTMwMjEvM2IxMWNmZDRkNTk0YjQxZjQ5NmZhMjUxZDJjYzNmNzYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" style="width: 300px">
+        <h3> Kalsubai Peak Trail <br></h3>
+        <hr color="#e84118;">
+        <p align="center"> Level : Hard <br> Length : 6.9 km <br> 
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(33) <br> </p>
+        <a align="center" style="color: #e84118;">
+            Read more &raquo; </a>
+        </a>    
+    </div>
+    <div class="card" style="margin-left: 3%; cursor: pointer;">
+        <a onclick="displayTrek(3)" style="text-decoration: none; color: black;">
+        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNDM5OTYyMjcvZTE2NTViODcyYTNlNzExZWZhOWVmZjNiNzVlMmQ5ZmYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" style="width: 300px">
+        <h3> Rajgad Fort Trek <br></h3>
+        <hr color="#e84118;">
+        <p align="center"> Level : Hard <br>  Length : 7.1 km <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(24) <br> </p>
+        <a align="center" style="color: #e84118;">
+            Read more &raquo; </a>
+        </a>    
+    </div>
+</div>
+<div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 13%; cursor: pointer;">
+        <a onclick="displayTrek(4)" style="text-decoration: none; color: black;">
+        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNTYzNjM5NjMvZjYxZDE3OTI5YTFmNjhkNTUzZjBlYjNmZjZlMjYwZmEuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" style="width: 300px">
+        <h3> Vetal Tekdi Hike <br></h3>
+        <hr color="#e84118;">
+        <p align="center"> Level : Easy <br>  Length : 3.9 km <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.6(39) <br> </p>
+        <a align="center" style="color: #e84118;">
+            Read more &raquo; </a>
+        </a>    
+    </div>
+   
+    <div class="card" style="margin-left: 3%; cursor: pointer;">
+        <a onclick="displayTrek(5)" style="text-decoration: none; color: black;">
+        <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNzA3NzE1NjEvNDY3ZDFlMzJhMWJkYjU5ODYxYjlhOGRkNzY4YzllZTUuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==" style="width: 300px">
+        <h3> Korigad Fort <br></h3>
+        <hr color="#e84118;">
+        <p align="center"> Level : Hard <br>  Length : 6.1 km <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.9(22) <br> </p>
+        <a align="center" style="color: #e84118;">
+            Read more &raquo; </a>
+        </a>    
+    </div>
+</div>
+</div>
+
+<!--Hikes info-->
+<div class="country" id="1" style="display: none;">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/92/14/2b/caption.jpg?w=1200&h=-1&s=1">
+    <h2>Sinhgad Fort</h2>
+    <p>Sinhagad Fort is a fort that was built 2000 years ago, and references to this fort can be found in the carvings of the Kaundinyeshwar temple. This fort has a long lost history associated with it, especially in terms of battles, and one such battle is the Battle of Sinhagad. It is built strategically with steep surrounding all around and has only two entrances to the fort, the Kalyan Darwaza and Pune Darwaza, this particular trail takes you through Pune Darwaza.</p><br>
+    <p>This fort has some of the most beautiful landscapes on the isolated cliff of the Sahyadri Mountains. Lush green environments and the mounts of western ghats are just amazing, then be it whatever the season is. There are a few challenging sections during this trail with rocks and all but nothing that cannot be crossed. </p><br>
+    <p>This trail begins from Sinhagad Paytha Road by the Askarwadi (Sinhgad Payatha) bus stop. Apart from that, this region is pretty well connected by roads and can be reached by taxi, bus, cab, or private vehicles. Even though the fort remains open throughout the year, but best months to visit this location is from June to February. There is a small fee to enter the fort, and the timings during which this fort operates is from 6 in the morning till 6 in the evening.</p><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.5834835233277!2d73.75330277508253!3d18.366276982697528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc293e6861118d9%3A0xcbb4d589c7d4e90b!2sSinhagad%20Fort!5e0!3m2!1sen!2sin!4v1710674141833!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(1)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="2" style="display: none;">
+    <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNjkzMTMwMjEvM2IxMWNmZDRkNTk0YjQxZjQ5NmZhMjUxZDJjYzNmNzYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==">
+    <h2>Kalsubai Peak Trail</h2>
+    <p>This beautiful trail in the Shayadri takes one to the highest point, Kalsubai Peak. Verdant green environments make up the surroundings of this location that are not only green but highly biodiverse as well, with many different species of flora, fauna, and avifauna to explore and observe. Along with that comes the fantastic views that are on offer.</p><br>
+    <p>One can camp at night in this area, and it is just fabulous, with each season providing a different experience, monsoons and winters in particular. Another of the key highlights of this trail is the iron ladders, which are pretty narrow, and being the only path up and down, they can become a little crowded at times. Along with that, these ladders are ages old and have pretty significant gaps in them, not only that, they creek with each step, questioning the integrity of the structure. It's pretty much an adventure in itself.</p><br>
+    <p>Bari village, which is the starting point, can be reached using various different modes of transport such as buses, shared taxis, cabs, or even private vehicles. This is an amazing trail that provides thrill and adventure with some of the most magical views, making it one of the must-visit locations in this region. </p><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15034.437604643756!2d73.69885204964834!3d19.601227857429308!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdd9da29a349bb1%3A0xd763db58ee98a373!2sKalsubai%20Peak!5e0!3m2!1sen!2sin!4v1710674210657!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(2)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="3" style="display: none;">
+    <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNDM5OTYyMjcvZTE2NTViODcyYTNlNzExZWZhOWVmZjNiNzVlMmQ5ZmYuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==">
+    <h2>Rajgad Fort Trek</h2>
+    <p>Rajgarh directly translates to "Ruling Fort" in English, and it was the ruling fort of the Maratha Empire for almost 24 years. Chhatrapati Shivaji Maharaj, one of the greatest Maratha Kings, made this his main ruling seat until he switched it to Raigarh. It has a long history and numerous stories, myths, and legends associated with it. </p><br>
+    <p>Apart from the great history, this location is known for its beautiful green environments that are not only green but highly biodiverse as well, with many different species of animals, birds, and plants to explore and observe. </p><br>
+    <p>It is one of the top tourist destinations of this location, and tourists in huge number visit almost on a daily basis which can maybe, at times, make it a little crowded. To avoid the crowd, one can opt to go on a weekday, avoid the swarm of tourists, and enjoy the whole trail in peace. </p><br>
+    <p>Trailhead for this particular trail lies by the Rajgarh Trek Starting Point, which can be reached easily by roads with various different modes of transport such as buses, taxis, cabs, tuk-tuks, or even private vehicles. It is highly recommended to avoid monsoons as the conditions becomes risky and slippery. </p><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3789.200382850202!2d73.67963787507955!3d18.24663338279466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc28fa3eb07c019%3A0xe2f323ba03aacd31!2sRajgad%20Fort!5e0!3m2!1sen!2sin!4v1710674267771!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(3)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="4" style="display: none;">
+    <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNTYzNjM5NjMvZjYxZDE3OTI5YTFmNjhkNTUzZjBlYjNmZjZlMjYwZmEuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==">
+    <h2>Vetal Tekdi Hike</h2>
+    <p>Vetal Tekdi is a temple on the top of the highest hill in Pune. This hill gets its name from the temple hence the name Vetala Hill. It is a decent trek with views of Pune from the top. The vegetation on this hill is pretty decent. This is an amazing trail for people who wants a getaway from their busy everyday schedule. It also has amazing sunrise and sunset points. </p><br>
+    <p>This trail begins from the Vetal Tekdi Parking Lot, which can be reached using a taxi, cab, or private vehicle. The closest bus stops to this location are the Bhandarkar Road and Law College Road HDFC bus stops. One might find muddy conditions in this region during the monsoons, although the beauty increases exponentially. </p><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15132.302061792687!2d73.80508474920573!3d18.52548932110152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfa05b3decff%3A0x640c629764fdc140!2sVetal%20Tekdi!5e0!3m2!1sen!2sin!4v1710674311797!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(4)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="5" style="display: none;">
+    <img src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNzA3NzE1NjEvNDY3ZDFlMzJhMWJkYjU5ODYxYjlhOGRkNzY4YzllZTUuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjoyMDQ4LCJoZWlnaHQiOjIwNDgsImZpdCI6Imluc2lkZSJ9LCJyb3RhdGUiOm51bGwsImpwZWciOnsidHJlbGxpc1F1YW50aXNhdGlvbiI6dHJ1ZSwib3ZlcnNob290RGVyaW5naW5nIjp0cnVlLCJvcHRpbWlzZVNjYW5zIjp0cnVlLCJxdWFudGlzYXRpb25UYWJsZSI6M319fQ==">
+    <h2>Korigad Fort</h2>
+    <p>Korigad Fort was built in the 15th century. It was built by Chatrapati Shivaji one of the greatest Maratha kings of all time. There are three temples on the top of the hill which looks sensational. </p><br>
+    <p>There is a 600-step climb to reach this location, although this particular trail takes one of the lesser-known alternate routes which meets up in the middle with the regular path. This place serves as an insight into the life of Chhatrapati Shivaji. There are many architectural insights into the history associated with it as well, differences in structure, placement of different rooms, etc., These things are just amazing to see and they even tell you about the different cultural beliefs. As the fort is very old a lot of stories accompany it, visit this fort to learn about the different cultural takes and to admire the beautiful views accompanied by it. Trailhead for this particular trail begins from Korigad Fort Parking which can be reached using a taxi, cab, or private vehicle. </p><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.9518828087366!2d73.3831620750888!3d18.62123388249194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be81cb3cd6da0ef%3A0x67efdfcbe539cc5b!2sKorigad%20Fort!5e0!3m2!1sen!2sin!4v1710674351491!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(5)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+
+<!--Where To Stay-->
+<div class="contactPage" id="5" style="padding-top: 5%;">
+    <h1>Where To Stay</h1>
+    <h3>Some top hotel picks in Maharashtra (India)</h3>
+</div> 
+<div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 15%; margin-top: 0.5%;">
+        <a href="https://www.booking.com/hotel/in/hyatt-pune.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&dest_id=-2108361&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=ac42509442fb015e&srepoch=1710675009&from_sustainable_property_sr=1&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/524190567.webp?k=5865b3470adbe010d3c6792cfd61f216765f40bfa47c90b79684fe2ac68fbbd9&o=">
+            <h3> Hyatt Pune <br></h3> 
+        </a>   
+    </div>
+   
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/oyo-collection-o-80421-pearl.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&dest_id=-2108361&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=popularity&nflt=distance%3D1000&srpvid=ac42509442fb015e&srepoch=1710675136&from=searchresults#hotelTmpl"  target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/441632099.webp?k=530441345390df63856e393e2ca748ddd7d022dedf5963406226dff93d0f1f08&o=">
+            <h3> Hotel Pearl Near <br> Shaniwar Wada <br></h3>
+        </a>
+    </div>
+
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/green-hills-hideaway.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675221&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/515196587.webp?k=b83309c6f250f0fdf2c543a96ddf9ace64e8aad6677d961be307b7ebd92dd67c&o=">
+            <h3> Green Hills Hideaway <br></h3>
+        </a>
+    </div>
+</div>
+<div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 15%; margin-top: 0.5%;">
+        <a href="https://www.booking.com/hotel/in/cosmicstays-rajgad-vista-stay-amp-play-adventure-awaits.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675375&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/500968786.webp?k=a955fda7a576821b4ff741dca7342b743a81e519f1ba284170c252f802991470&o=">
+            <h3> CosmicStays Rajgad Vista <br></h3> 
+        </a>   
+    </div>
+   
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/panshet-luxury-resort-by-maharashtra-campers.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675511&from=searchresults#hotelTmpl"  target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/513666618.webp?k=41f3ae06ad75417957399a6b0588f1ed9c8da0527c61a9a9b99ec1e04cd58854&o=">
+            <h3> Panshet luxury resort by <br>Maharashtra Camper’s <br></h3>
+        </a>
+    </div>
+
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/the-haven-vanilla-farms.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675684&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/448430765.webp?k=7a4f1c6651605cb6cd39fde83d6cacb59230a0567e7eec4d320f1bf0b3850587&o=">
+            <h3> Vanilla Farms <br></h3>
+        </a>
+    </div>
+</div>
+
+<!--LOGIN BOX-->    
+<div class="loginForm" align="center" style="margin-left: 10%;" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"><input type="email" id="eid" placeholder="Email">
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div> 
+
+<!--Footer Section-->
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

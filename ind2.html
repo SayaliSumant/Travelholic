@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+
+    <title>Destinations &bull; India</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+
+<body>
+    
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Info-->
+<div class="country">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/633/original/1611740418_kerala.png?w=753&h=450&dpr=1.0">
+    <h2>Wildlife Sancturies in Maharashtra (India)</h2>
+    <p>Varied climate and greenery all year round attracts nature lovers to this state from all around this world. Peacocks, blue bulls, buffaloes, bisons are just a few of the countless animals living in these sanctuaries in Maharashtra. With pleasant climate and a varied topography, the sanctuaries of Maharashtra provide the perfect peace for a tired soul.</p><br>
+    <p>No matter what you're looking for, you can find a diverse range of the best hiking trails in Maharashtra to suit your needs.From Tadoba National Park which houses wild species of tigers and leopards, to Bhimashankar Wildlife Sanctuary which houses Indian Giant Squirrel, you will be left just in awe.</p><br>
+    <h2>Here are the best wildlife sanctuaries in Maharashtra:</h2>
+</div>
+
+<!--List of Hikes-->
+<div id="trekList">
+    <div style="display: flex; flex-direction: row; margin-top: 4%;" align="center">
+        <div class="card" style="margin-left: 13%; cursor: pointer;">
+            <a onclick="displayTrek(1)" style="text-decoration: none; color: black;">
+            <img src="https://media2.thrillophilia.com/images/photos/000/149/633/original/1611740418_kerala.png?w=753&h=450&dpr=1.0" style="width: 300px">
+            <h3> Koyna Wildlife Sanctuary <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.8(226) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(2)" style="text-decoration: none; color: black;">
+            <img src="https://media2.thrillophilia.com/images/photos/000/149/557/original/1553668217_Phansad_bird_sanctuary.png?w=753&h=450&dpr=1.0" style="width: 300px">
+            <h3> Phansad Bird Sanctuary <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(33) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(3)" style="text-decoration: none; color: black;">
+            <img src="https://media2.thrillophilia.com/images/photos/000/149/560/original/1553670228_Melghat_Wildlife_Sanctuary.png?w=753&h=450&dpr=1.0" style="width: 300px">
+            <h3> Melghat Wildlife Sanctuary <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(24) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 13%; cursor: pointer;">
+            <a onclick="displayTrek(4)" style="text-decoration: none; color: black;">
+            <img src="https://media2.thrillophilia.com/images/photos/000/149/593/original/1553680650_shutterstock_1050266480.jpg?w=753&h=450&dpr=1.0" style="width: 300px">
+            <h3> Sagareshwar Wildlife Sanctuary <br></h3>
+            <hr color="#e84118;">
+            <p align="center">
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.6(39) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+       
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(5)" style="text-decoration: none; color: black;">
+            <img src="https://media2.thrillophilia.com/images/photos/000/149/591/original/1553680005_Bor_Wildlife_Sanctuary.png?w=753&h=450&dpr=1.0" style="width: 300px">
+            <h3> Bor Wildlife Sanctuary <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.9(22) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+    </div>
+</div>
+
+<!--Hikes info-->
+<div class="country" id="1" style="display: none;">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/633/original/1611740418_kerala.png?w=753&h=450&dpr=1.0">
+    <h2>Koyna Wildlife Sanctuary</h2>
+    <p>One of the must visit wildlife sanctuaries in Maharashtra is the Koyna wildlife Sanctuary. Situated in a dense forest reserve in Satara District of Maharashtra, Koyna is a beautiful sanctuary. A home to a number of mammals, such as Bengal Tigers, Indian Leopards, deer, Indian Bison, sloth bears, barking deer, and mouse deer; along with birds like Night-tailed light jar, Brown-capped pygmy woodpecker, and reptiles, Koyna is a place of sheer bliss.</p><br><br>
+    <p><b>Best time to visit: </b>The best time to visit Koyna is between June to October. October being the best month to visit.</p><br><br>
+    <p><b>Location: </b>Koyna Nagar, Koyna, Maharashtra.</p><br><br>
+    <p><b>Safari timing and price: </b>The sanctuary is open from 9 AM till 6 PM. Ticket prices is 20 Rs per person; with addition to car, it’s 50 INR. For boating, the ticket prices range from 400 INR to 500 INR.</p><br><br>
+    <p><b>Distance from Pune and Mumbai: </b>The distance from Mumbai to Koyna is 265 km and from Pune it is 181 km.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.4798175644364!2d73.73723087947235!3d17.769132939827312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc26db900008b51%3A0xebf3979d1af2cb85!2sKoyna%20Wildlife%20Sanctuary!5e0!3m2!1sen!2sin!4v1710678025730!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(1)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<div class="country" id="2" style="display: none;">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/557/original/1553668217_Phansad_bird_sanctuary.png?w=753&h=450&dpr=1.0">
+    <h2>Phansad Bird Sanctuary</h2>
+    <p>Spread over an area of 52 sq. km, the Phansad bird sanctuary is another beautiful wildlife sanctuaries in Maharashtra that you must visit. Phansad is also a wildlife sanctuary that is home to many mammals and other animals. The Phansad Bird sanctuary is home to over 279 different species of fauna and 720 species of flora.</p><br><br>
+    <p>The bird sanctuary which is located near Kashid Beach is another attraction for the tourists. One can relax on the beach after watching the beautiful birds in the sanctuary. Again it is a perfect destination for people who love taking beautiful pictures. Grab your camera and click awesome pictures of the birds.</p><br><br>
+    <p><b>Best time to visit: </b>The best time to visit Phansad bird Sanctuary is between November and March.</p><br><br>
+    <p><b>Location: </b>The beautiful sanctuary is located in Raigad, Roha, Maharashtra.</p><br><br>
+    <p><b>Safari timings and cost: </b>The time to visit the sanctuary is between 8 am to 8 pm. The Entry fee is Rs 30/- for adult and Rs 15 for children. Camera and other types of equipment will be charged extra.</p><br><br>
+    <p><b>Distance from Pune and Mumbai: </b>The distance from Pune and Mumbai is 180 km and 156 km respectively.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.306114475968!2d72.94612817508401!3d18.424405282650618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be868f91dc93bd3%3A0xc776a62dc9b6b156!2sPhansad%20Wildlife%20Sanctuary!5e0!3m2!1sen!2sin!4v1710678062480!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br><br>
+    <a onclick="displayList(2)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<div class="country" id="3" style="display: none;">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/591/original/1553680005_Bor_Wildlife_Sanctuary.png?w=753&h=450&dpr=1.0">
+    <h2>Melghat Wildlife Sanctuary</h2>
+    <p>Established in the year of 1985, Melghat wildlife Sanctuary another famous wildlife sanctuaries in Maharashtra which is the proud home to many flora and fauna. Surrounded by the Satpura range and the Tapti River, the Wildlife sanctuary is famous as a tiger reserve. The name Melghat means ‘meeting the Ghats’ as Melghat wildlife sanctuary meets the Western Ghats of India.</p><br><br>
+    <p>The Melghat Sanctuary is also the home to some of the endangered species; Forest Owlet is an example of such endangered species. Nilgai, sambar, leopard, sloth bears and other animals can also be seen in the forest.</p><br><br>
+    <p><b>Best time to visit: </b>The best time to visit the wildlife sanctuary is from December to June.</p><br><br>
+    <p><b>Location: </b>Located at Amravati District of Maharashtra.</p><br><br>
+    <p><b>Safari timings and cost: </b>Safari Starts from morning 8 am to 5 in the evening depending on the months. One needs to pay Rs. 600 per car for a gypsy safari along with a tour guide.</p><br><br>
+    <p><b>Distance from Pune and Mumbai: </b>Distance from Pune is 570 km and distance from Mumbai is 621 km</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.337309612839!2d78.66326807515159!3d20.9791117806578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd489e6534062f7%3A0x4f6484b8f39567c7!2sBor%20Tiger%20Reserve!5e0!3m2!1sen!2sin!4v1710678169026!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(3)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<div class="country" id="4" style="display: none;">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/593/original/1553680650_shutterstock_1050266480.jpg?w=753&h=450&dpr=1.0">
+    <h2>Sagareshwar Wildlife Sanctuary</h2>
+    <p>Sagareshwar Wildlife Sanctuary is a manmade sanctuary that is in the state of Maharashtra. The plants in the Sanctuary is all planted by a human being and different animal species are induced in the sanctuary and it is one of the best wildlife sanctuaries in Maharashtra.</p><br><br>
+    <p>Animals like wild boars, blackbucks, sambar, deer are also being found in abundance in the manmade sanctuary. Reptiles, insects and different other birds have made a home in this sanctuary.</p><br><br>
+    <p><b>Best time to visit: </b>The best time to visit the Sanctuary is from August to February.</p><br><br>
+    <p><b>Location: </b>The man made sanctuary is located in Tupari, Maharashtra.</p><br><br>
+    <p><b>Safari timing and price: </b>One can visit the Sanctuary during the day time. Tickets are not required to visit the sanctuary.</p><br><br>
+    <p><b>Distance from Pune and Mumbai: </b>Distance from Pune is 195 km and distance from Mumbai is 337 km.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3812.3656840120952!2d74.37566817505352!3d17.152413583695203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc171878137a82d%3A0xfe73b498e66ec60d!2sSagareshwar%20Deer%20Sanctuary!5e0!3m2!1sen!2sin!4v1710678139022!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(4)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<div class="country" id="5" style="display: none;">
+    <img src="https://media2.thrillophilia.com/images/photos/000/149/560/original/1553670228_Melghat_Wildlife_Sanctuary.png?w=753&h=450&dpr=1.0">
+    <h2>Bor Wildlife Sanctuary</h2>
+    <p>Bor Wildlife sanctuary which is located in the state of Maharashtra is declared as a tiger reserve in the year 2014. The Sanctuary which covers a total area of 138 sq. km, is notable for tigers and it is one of the best wildlife sanctuaries in Maharashtra.</p><br><br>
+    <p>Along with the Tigers, other animals and mammals can be abundantly found in the sanctuary. The Bor sanctuary is situated near Pench Tiger Reserve. One can also find the Bor Dam located in the Sanctuary.</p><br><br>
+    <p><b>Best time to visit: </b>Best time to see tigers in the sanctuary is during the summer season.</p><br><br>
+    <p><b>Location: </b>Located in Wardha, Maharashtra.</p><br><br>
+    <p><b>Safari timing and Price: </b>Morning Safari stars at 6 am and evening safari starts at 4:30 pm. Tickets cost Rs 50 for adult and 25 for children and car or gypsy cost Rs 100.</p><br><br>
+    <p><b>Distance from Pune and Mumbai: </b>Distance from Pune and Mumbai are 655 km and 766 km respectively.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714.5900240605542!2d77.14594137516367!3d21.406041580339295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd7ab82e128568b%3A0x542a36b7efdedfa2!2sMelghat%20Tiger%20Reserve!5e0!3m2!1sen!2sin!4v1710678099057!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(5)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<!--Where To Stay-->
+<div class="contactPage" id="5" style="padding-top: 5%;">
+    <h1>Where To Stay</h1>
+    <h3>Some top hotel picks in Maharashtra (India)</h3>
+</div> 
+<div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 15%; margin-top: 0.5%;">
+        <a href="https://www.booking.com/hotel/in/hyatt-pune.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&dest_id=-2108361&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=popularity&srpvid=ac42509442fb015e&srepoch=1710675009&from_sustainable_property_sr=1&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/524190567.webp?k=5865b3470adbe010d3c6792cfd61f216765f40bfa47c90b79684fe2ac68fbbd9&o=">
+            <h3> Hyatt Pune <br></h3> 
+        </a>   
+    </div>
+   
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/oyo-collection-o-80421-pearl.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&dest_id=-2108361&dest_type=city&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=3&hapos=3&sr_order=popularity&nflt=distance%3D1000&srpvid=ac42509442fb015e&srepoch=1710675136&from=searchresults#hotelTmpl"  target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/441632099.webp?k=530441345390df63856e393e2ca748ddd7d022dedf5963406226dff93d0f1f08&o=">
+            <h3> Hotel Pearl Near <br> Shaniwar Wada <br></h3>
+        </a>
+    </div>
+
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/green-hills-hideaway.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=4&hapos=4&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675221&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/515196587.webp?k=b83309c6f250f0fdf2c543a96ddf9ace64e8aad6677d961be307b7ebd92dd67c&o=">
+            <h3> Green Hills Hideaway <br></h3>
+        </a>
+    </div>
+</div>
+<div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 15%; margin-top: 0.5%;">
+        <a href="https://www.booking.com/hotel/in/cosmicstays-rajgad-vista-stay-amp-play-adventure-awaits.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=1&hapos=1&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675375&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/500968786.webp?k=a955fda7a576821b4ff741dca7342b743a81e519f1ba284170c252f802991470&o=">
+            <h3> CosmicStays Rajgad Vista <br></h3> 
+        </a>   
+    </div>
+   
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/panshet-luxury-resort-by-maharashtra-campers.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=13&hapos=13&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675511&from=searchresults#hotelTmpl"  target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/513666618.webp?k=41f3ae06ad75417957399a6b0588f1ed9c8da0527c61a9a9b99ec1e04cd58854&o=">
+            <h3> Panshet luxury resort by <br>Maharashtra Camper’s <br></h3>
+        </a>
+    </div>
+
+    <div class="card" style="margin-left: 2%;">
+        <a href="https://www.booking.com/hotel/in/the-haven-vanilla-farms.en-gb.html?label=gen173nr-1FCAsoAkITd3luZGhhbS1kdWJhaS1kZWlyYUgJWARobIgBAZgBCbgBF8gBDNgBAegBAfgBC4gCAagCA7gCkqfbrwbAAgHSAiRhMTZmNGNhMS01ZmJiLTQzYWQtYWE5Yi0wN2VjMzM1NDg4ZWbYAgbgAgE&sid=3dabea4a62838588410f2775c3a1e5c1&aid=304142&ucfs=1&arphpl=1&group_adults=2&req_adults=2&no_rooms=1&group_children=0&req_children=0&hpos=9&hapos=9&sr_order=distance_from_search&srpvid=5f365131e5bc02fe&srepoch=1710675684&from=searchresults#hotelTmpl" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/square600/448430765.webp?k=7a4f1c6651605cb6cd39fde83d6cacb59230a0567e7eec4d320f1bf0b3850587&o=">
+            <h3> Vanilla Farms <br></h3>
+        </a>
+    </div>
+</div>
+
+<!--LOGIN BOX-->    
+<div class="loginForm" align="center" style="margin-left: 10%;" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"><input type="email" id="eid" placeholder="Email">
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div> 
+
+<!--Footer Section-->
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

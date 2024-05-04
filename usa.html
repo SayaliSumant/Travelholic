@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+
+    <title>Destinations &bull; United States</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+
+<body>
+
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Heading-->
+<div class="container">
+    <h1 style="color: white; -webkit-text-stroke: 2px black;">United States</h1>
+    <h2 style="color: rgb(22, 2, 2); -webkit-text-stroke: 1px rgb(11, 11, 11);">A travel guide for your journeys</h2>
+    <img src="https://wallpapercave.com/wp/wp8975781.jpg" style="height: 65%; margin-top: 6%;" class="bgVideo"><br><br><br><br>
+</div>
+
+<!--CARD-->
+<h1 align="center" style="margin-top: 10%;">Search Results for "US"</h1>
+<div style="display: flex; flex-direction: row; margin-top: 4%;" align="center">
+    <div class="card" style="margin-left: 23%;">
+        <a href="usa2.html" style="text-decoration: none; color: black;">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2020/08/IMG_9762.jpg" style="width: 300px">
+        <h3 align="center"> Diamond Head Hike & <br> Crater Overlook Trail</h3>
+        <hr color="#e84118;">
+        <p align="center"> The Diamond Head hike in Oahu is a nice, <br>
+            easy trek near Honolulu that belongs somewhere <br>
+            on your Hawaii to do list. Aside from …</p>
+            <a href="usa2.html" align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+        </a>    
+        </div>
+    <div class="card" style="margin-left: 7%;">
+        <a href="usa1.html" style="text-decoration: none; color: black;">
+        <img src="https://theworldtravelguy.com/wp-content/uploads/2021/12/DSCF3605.jpg" style="width: 300px">
+        <h3 align="center"> Great Zion Hikes </h3>
+        <hr color="#e84118;">
+        <p align="center"> Some of the best hikes in Zion National Park<br>
+            include famous Utah trails like Angels Landing, <br> 
+            The Narrows, and Observation Point, but there <br>
+            are also some short …</p>
+            <a href="usa1.html" align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+        </a>    
+   </div>  
+</div>
+
+<!--LOGIN BOX-->    
+<div class="loginForm" align="center" style="margin-left: 10%;" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"><input type="email" id="eid" placeholder="Email">
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div> 
+
+<!--Footer Section-->
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="style3.css">
+        <script src="./script.js"></script>
+        <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+    
+        <title>Travelholic - Budget Estimation</title>
+        <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+    
+<body>
+            
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Heading-->
+<div class="container">
+    <h1 style="color: black;">Budget Estimation</h1>
+    <h3 style="color: black;">Plan Your Dream Trip with us!!</h3>
+    <img src="contact.jpg" style="height: 55%;" class="bgVideo">
+</div>
+
+<!--Budget-->
+<section id="budget-section" style="margin-top: 12%;" align="center">
+    <h2>Provide Your Details</h2>
+    <form id="budget-form" onsubmit="calcBudget(event)">
+        <br><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+            <label for="destination">Destination:</label><br>
+            <select id="d" name="destination" required>
+                <option value="">Select a destination...</option>
+                <option value="Argentina">Argentina</option>                
+                <option value="Belize">Belize</option>
+                <option value="Japan">Japan</option>
+                <option value="Thailand">Thailand</option>
+                <option value="India">India</option>
+                <option value="NZ">New Zealand</option>
+                <option value="Spain">Spain</option>
+                <option value="UAE">UAE</option>
+                <option value="US">United States</option>
+            </select>
+            <br><br><br><br>
+            <label for="persons">Number of Persons: </label><br>
+            <input type="number" id="num" style="width: 50%;" required>
+            <br><br>
+            <label for="days">Number of Days: </label><br>
+            <input type="number" id="days" style="width: 50%;" required>
+            <br><br>
+            <button type="submit" style="cursor: pointer;">Calculate</button>
+    </form>
+</section>
+
+<!--Buget Result-->
+<div id="budget-result" style="margin-top: 12%;">
+     <h1 align="center">Your Average Trip Budget Results are here : </h1>
+     <h2 align="center" id="addname">Average expenses per person in </h2>
+     <ul style="font-size: large; margin-left: 25%;" >
+        <li id="d1">Accommodation : </li>
+        <li id="d2">Flight Ticket : </li>
+        <li id="d3">Food, Drinks, & Activities : </li>
+        <li id="d4">Transportation : </li>
+     </ul>
+     <h3 align="center" id="d5">No. of Persons : </h3>
+     <h3 align="center" id="d6">Total Expenses for on Person : </h3>
+     <h3 align="center" id="d7">Your approximate trip budget is  </h3><br><br>
+     <h3 align="center"><a href="" target="_blank" id="d8" 
+        style="text-decoration: none; color: black; border: 2px solid; padding: 1%; cursor: pointer;">
+        Details &raquo;</a></h3>
+</div>
+
+<!--Tours-->
+<h2 align="center">
+    <a  onclick="showTours()" id="d9" 
+    style="text-decoration: none; color: black; border: 2px solid; 
+    padding: 1%; width: 25%; cursor: pointer; margin-left: 37%; display: none;">
+    </a>
+</h2>
+
+<div id="India" style="display: none;">
+    <div class="contactPage">
+    <h1>Tours</h1>
+    <h3>The Best India Tours & Activities</h3>
+    </div> 
+    <div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 16%;">
+        <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5d9b34210defc.jpeg/156.webp">
+        <h3> Private Full Day City Tour <br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 7 hours <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 5(255) </p>
+        </a>    
+   </div>
+    <div class="card">
+        <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5cb826d22f386.jpeg/156.webp">
+        <h3> Private 4-Day Golden <br> Travel Luxury Tour <br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 4 days <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 5(136) </p>
+        </a>    
+   </div>
+    <div class="card">
+        <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5d107bd004387.jpeg/156.webp">
+        <h3> Private Half Day Luxury <br> Tour from Mumbai <br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 5.5 hours <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(36) </p>
+        </a>    
+   </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+    <div class="card" style="margin-left: 23%;">
+        <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5daff1772e134.jpeg/73.webp" style="width: 300px;">
+        <h3> Day Trip to Taj Mahal, <br> Agra Fort <br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 13 hours <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 5(200) </p>
+        </a>    
+   </div>
+    <div class="card">
+        <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5eeb4145de826.jpeg/73.webp" style="width: 300px;">
+        <h3> 4-Day Golden Triangle & <br> Ranthambore Tiger Safari <br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 4 days <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(29) </p>
+        </a>    
+   </div>
+    </div>  
+</div>
+
+<div id="NZ" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best New Zealand Tours & Activities</h3>
+    </div>  
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=114922&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=newzealandtours01&currency=EUR&q=Hobbiton+Movie+Set&queryMatch=all&widget=activities&wid=31de9dcf-b08f-5f08-9c60-3cc0e88749aa&page_id=ad84fd14-59a0-52bc-8625-88f912e1e72d&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/641ba333d8d46.jpeg/156.webp">
+            <h3> Hobbiton Movie Set Guided <br>Tour Ticket</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 2.5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(5059) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=398555&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=newzealandtours01&currency=EUR&q=Franz+Josef+Town&queryMatch=all&widget=activities&wid=31de9dcf-b08f-5f08-9c60-3cc0e88749aa&page_id=ad84fd14-59a0-52bc-8625-88f912e1e72d&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/608b6f314b809.jpeg/156.webp">
+            <h3> Glacier Helicopter Tour with <br> Snow Landing <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 25 minutes <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(236) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=61222&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=newzealandtours01&currency=EUR&q=Queenstown&queryMatch=all&widget=activities&wid=31de9dcf-b08f-5f08-9c60-3cc0e88749aa&page_id=ad84fd14-59a0-52bc-8625-88f912e1e72d&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5e2a08ea70c05.jpeg/156.webp">
+            <h3> Shotover River and Kawarau <br>River Jet Boat Ride <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 1 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(583) </p>
+            </a>    
+       </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=101903&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=newzealandtours01&currency=EUR&q=Nelson&queryMatch=all&widget=activities&wid=31de9dcf-b08f-5f08-9c60-3cc0e88749aa&page_id=ad84fd14-59a0-52bc-8625-88f912e1e72d&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5c885d029bec8.jpeg/73.webp">
+            <h3> Abel Tasman National<br> Park Scenic Cruise<br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 3 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(394) </p>
+            </a>    
+       </div>   
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=115240&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=newzealandtours01&currency=EUR&q=Queenstown&queryMatch=all&widget=activities&wid=31de9dcf-b08f-5f08-9c60-3cc0e88749aa&page_id=ad84fd14-59a0-52bc-8625-88f912e1e72d&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5b9f48bfd8400.jpeg/73.webp">
+            <h3> Milford Sound & Full-Day Trip <br>By Train and Boat<br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 5 Hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(573) </p>
+            </a>    
+       </div>
+       <div class="card">
+        <a href="https://www.getyourguide.co.uk/kaikoura-l37419/kaikoura-2-hour-whale-watching-cruise-t226204/?ranking_uuid=776d54a9-c0f1-4702-a3de-1532c13628af" target="_blank" style="text-decoration: none; color: black;">
+        <img src="https://cdn.getyourguide.com/img/tour/5bd0682c04382.jpeg/156.webp">
+        <h3> 2-Hour Small Boat Scenic <br> Tours<br></h3>
+        <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 2 hours <br> <br>
+            <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(744) </p>
+        </a>    
+        </div>
+    </div>
+</div>
+
+<div id="Belize" style="display: none;">
+
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best Belize Tours & Activities</h3>
+    </div> 
+    
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=364340&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=3belizewidget&currency=EUR&q=belize&queryMatch=all&widget=activities&wid=ee65ad29-5beb-53b3-b202-2650dddd6d27&page_id=071f3ec0-167b-58b6-80e6-3d9fef958cf2&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/612ed6cb0cf4c.jpeg/156.webp">
+            <h3> 7-Stop Snorkeling in the <br>Belize Barrier Reef</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 6 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(266) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=176307&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=3belizewidget&currency=EUR&q=belize&queryMatch=all&widget=activities&wid=ee65ad29-5beb-53b3-b202-2650dddd6d27&page_id=071f3ec0-167b-58b6-80e6-3d9fef958cf2&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5b6cd623dcf81.jpeg/156.webp">
+            <h3> Actun Tunichil Muknal <br> (ATM) Cave Full-Day Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 8 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(191) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.co.uk/belize-city-l382/belize-city-lamanai-maya-ruins-river-boat-safari-w-lunch-t372525/?ranking_uuid=d6dd76ba-3b97-4a85-86b0-2ed1489ef956" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5e498bedbd982.jpeg/132.webp">
+            <h3> Lamanai Maya Ruins <br>Mayan Mask Temple <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 8 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.9(28) </p>
+            </a>    
+       </div>
+    </div>
+</div>
+
+<div id="Argentina" style="display: none;">
+
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best Argentina Tours & Activities</h3>
+    </div> 
+    
+    <div style="display: flex; flex-direction: row;">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=228553&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Foz+do+Igua%C3%A7u&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5cb70505efc7d.jpeg/156.webp">
+            <h3> Argentinian Iguazu Falls <br> with Boat Ride <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(149) </p>
+            </a>    
+       </div>
+        <div class="card">
+           <a href="https://www.getyourguide.com/s/?et=564632&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=iguazufallswidget02&currency=EUR&q=Puerto+Iguazu&queryMatch=all&widget=activities&wid=e17266b1-6253-5b0c-9e4b-9673bf782972&page_id=2ce276eb-0b2f-5434-818a-70e96536c4e6&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+           <img src="https://cdn.getyourguide.com/img/tour/df811a919d7749d2f063eefee9719c17fcd13f942500b7f519e75acae3363517.jpeg/156.webp">
+           <h3> Full Day Iguazu Falls <br> And Argentina Sides <br></h3> 
+           <p>  <i class="fa-solid fa-clock-rotate-left"></i> Duration: 8 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(96) </p>
+           </a>    
+        </div>
+        <div class="card">
+           <a href="https://www.getyourguide.com/s/?et=231537&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=peritomorenowidget01&currency=EUR&q=El+Calafate&queryMatch=all&widget=activities&wid=cec36a3b-9fc9-5f2f-af1e-5013a1010add&page_id=d7646587-0f3f-5f88-bb0c-3f4f61293a01&visitor_id=AB31E2BE987847B9A43995459732AD49" style="text-decoration: none; color: black;">
+           <img src="https://cdn.getyourguide.com/img/tour/5caf9bfc43d81.png/156.webp">
+           <h3> Perito Moreno Glacier & <br> Optional Boat Cruise <br></h3>
+           <p>  <i class="fa-solid fa-clock-rotate-left"></i> Duration: 8 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(834) </p>
+           </a>    
+        </div>
+    </div>
+</div>
+
+<div id="Japan" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best Japan Tours & Activities</h3>
+    </div>  
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=173031&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=6japanwidget01&currency=EUR&q=Tokyo&queryMatch=all&widget=activities&wid=283805f1-ab81-556a-b5f8-e035d049ef0a&page_id=74a1959b-d17c-54bb-a626-d89134261b0c&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/2211255599628bd9.jpeg/156.webp">
+            <h3> Mt. Fuji Full-Day <br>Sightseeing Trip</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 10 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(1738) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=393715&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=6japanwidget01&currency=EUR&q=Tokyo&queryMatch=all&widget=activities&wid=283805f1-ab81-556a-b5f8-e035d049ef0a&page_id=74a1959b-d17c-54bb-a626-d89134261b0c&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5f94a66165488.jpeg/156.webp">
+            <h3> Private City Highlights Tour <br> with Local Guide <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 6 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(472) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.co.uk/osaka-l1204/osaka-main-sites-and-hidden-spots-guided-walking-tour-t384240/?ranking_uuid=59d602ef-46bd-4816-9b49-a2a44221006b" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5e731d35e72fa.jpeg/132.webp">
+            <h3> Osaka Main Sights <br>and Hidden Spots <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 4 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.9(183) </p>
+            </a>    
+       </div>
+    </div>
+</div>
+
+<div id="Thailand" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best Thailand Tours & Activities</h3>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=318498&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=thailandtours01&currency=EUR&q=Chiang+Mai&queryMatch=all&widget=activities&wid=73a57c74-ba69-5b31-b1a2-163ce956c084&page_id=b3bac4c7-bbfc-5196-902f-db432615b9a9&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/ac51af3880b89a7f.jpeg/156.webp">
+            <h3> Doi Inthanon National Park <br>Day Trip</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 9 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2556) </p>
+            </a>    
+       </div>
+        <div class="card" style="margin-left: 2%;">
+            <a href="https://www.getyourguide.com/s/?et=158046&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=thailandtours01&currency=EUR&q=Bangkok&queryMatch=all&widget=activities&wid=73a57c74-ba69-5b31-b1a2-163ce956c084&page_id=b3bac4c7-bbfc-5196-902f-db432615b9a9&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5aef851420cb9.jpeg/156.webp">
+            <h3> City Highlights Temple and <br> Market Walking Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 2-4 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2549) </p>
+            </a>    
+       </div>
+        <div class="card" style="margin-left: 2%;">
+            <a href="https://www.getyourguide.com/s/?et=274372&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=thailandtours01&currency=EUR&q=Chiang+Mai&queryMatch=all&widget=activities&wid=73a57c74-ba69-5b31-b1a2-163ce956c084&page_id=b3bac4c7-bbfc-5196-902f-db432615b9a9&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/64c111539d054.jpeg/156.webp">
+            <h3> Chiang Rai Temples <br>Guided Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 10-14 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2173) </p>
+            </a>    
+       </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 23%;">
+            <a href="https://www.getyourguide.com/s/?et=154758&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=thailandtours01&currency=EUR&q=Chiang+Mai&queryMatch=all&widget=activities&wid=73a57c74-ba69-5b31-b1a2-163ce956c084&page_id=b3bac4c7-bbfc-5196-902f-db432615b9a9&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+                <img src="https://cdn.getyourguide.com/img/tour/5af7a0526b010.jpeg/73.webp" style="width: 300px;">
+            <h3> Elephant Care Program and Nursery Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 5-9 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(1416) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=411963&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=thailandtours01&currency=EUR&q=Phuket&queryMatch=all&widget=activities&wid=73a57c74-ba69-5b31-b1a2-163ce956c084&page_id=b3bac4c7-bbfc-5196-902f-db432615b9a9&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/61fcc88703c6f.jpeg/73.webp" style="width: 300px;">
+            <h3> Phi Phi Islands and Maya Bay Day Trip with Lunch <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 11.5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(1456) </p>
+            </a>    
+       </div>
+    </div>
+</div>  
+
+<div id="US" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best USA Tours & Activities</h3>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.co.uk/new-york-city-l59/from-new-york-city-1-day-niagara-falls-tour-t151799/" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/0271e936ca61e3c9.jpeg/132.webp">
+            <h3> From New York City <br>Niagara Falls Tour</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 19 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(629) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.co.uk/new-york-city-l59/statue-of-liberty-ellis-island-ticket-options-with-ferry-t393246/" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5f7b651435b28.jpeg/132.webp">
+            <h3> New York City <br> Statue Of Liberty Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 1 day <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(7372) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.co.uk/culver-city-l179750/from-los-angeles-7-day-golden-experience-tour-t100164/?ranking_uuid=3eb9fb3a-55c2-4a75-8361-ea9fa7203518" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://www.getyourguide.co.uk/cdn/img/tour/5b20380bb9bb7.jpeg/132.webp">
+            <h3> Half Dome Yosemite <br>Day Trip <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration:7 days <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.7(35) </p>
+            </a>    
+       </div>
+    </div>
+</div> 
+
+<div id="Spain" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best Spain Tours & Activities</h3>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=50027&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Sagrada+Familia&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/62bacf6a87bba.jpeg/156.webp">
+            <h3> Sagrada Familia Entry Ticket</h3>
+            <p><br><br> <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(51760) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=53791&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Barcelona&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/93473fd2896a1e0e.jpeg/156.webp">
+            <h3> Park Güell Admission Ticket<br></h3>
+            <p> <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(38782) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=72879&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Barcelona&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/590354fed56f6.jpeg/156.webp">
+            <h3> Sagrada Familia Tour & <br>Optional Tower Visit <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 1.5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2765) </p>
+            </a>    
+       </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=426133&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Andalusia&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/66d96ec78d3ab79f.jpeg/156.webp">
+            <h3> Entry Ticket and <br>Guided Tour</h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 2 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2846) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=75398&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Alhambra%2C+Granada&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/ab969eb7e59381c8.jpeg/73.webp">
+            <h3> Alhambra and Nasrid <br> Palaces Entry Ticket <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 3 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(7248) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=288805&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=spaintours01&currency=EUR&q=Barcelona&queryMatch=all&widget=activities&wid=979a71c7-1a9b-505f-8573-277d5cf6d0f5&page_id=b4b9c26c-9d91-571f-95ae-f88d2abed1c5&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/448290a706817776.jpeg/73.webp">
+            <h3> Fast-Track Access <br>Guided Tour <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 1.5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 5(5399) </p>
+            </a>    
+       </div>
+    </div>
+</div> 
+
+<div id="UAE" style="display: none;">
+    <div class="contactPage">
+        <h1>Tours</h1>
+        <h3>The Best UAE Tours & Activities</h3>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 16%;">
+            <a href="https://www.getyourguide.com/s/?et=346086&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=uaetours01&currency=EUR&q=Dubai&queryMatch=all&widget=activities&wid=172307c5-78ae-5cf6-8f44-6a154d4177ce&page_id=4d00fa51-aaf3-5261-b709-1f2fab4b208a&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/654ede4c772be129.jpeg/73.webp">
+            <h3> Mega Yacht Cruise with <br>Buffet Dinner</h3>
+            <p> <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2550) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=31156&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=uaetours01&currency=EUR&q=Dubai&queryMatch=all&widget=activities&wid=172307c5-78ae-5cf6-8f44-6a154d4177ce&page_id=4d00fa51-aaf3-5261-b709-1f2fab4b208a&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/6243b2458182d9e5.jpeg/156.webp">
+            <h3> Sightseeing Helicopter Ride from <br> The Palm <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 12-15 minutes <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(2889) </p>
+            </a>    
+       </div>
+        <div class="card">
+            <a href="https://www.getyourguide.com/s/?et=49019&psrc=widget&partner_id=VTUXVNU&utm_medium=online_publisher&cmp=uaetours01&currency=EUR&q=Dubai&queryMatch=all&widget=activities&wid=172307c5-78ae-5cf6-8f44-6a154d4177ce&page_id=4d00fa51-aaf3-5261-b709-1f2fab4b208a&visitor_id=AB31E2BE987847B9A43995459732AD49" target="_blank" style="text-decoration: none; color: black;">
+            <img src="https://cdn.getyourguide.com/img/tour/5bb551eebafcde0c6d3d354bf15aa98cc366f201368b2ce871bd39a34ecdec21.jpg/156.webp">
+            <h3> Burj Khalifa Level 124 & 125 <br>Entry Ticket <br></h3>
+            <p> <i class="fa-solid fa-clock-rotate-left"></i> Duration: 1.5 hours <br> <br>
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(56318) </p>
+            </a>    
+       </div>
+    </div>
+</div>
+
+<!--LOGIN BOX-->    
+<div class="loginForm" align="center" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"> <input type="email" id="eid" placeholder="Email" required> 
+            
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div>
+
+<!--FOOTER SECTION-->    
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>

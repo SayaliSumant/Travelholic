@@ -1,0 +1,167 @@
+/*Navigation Bar*/
+.nav{
+    margin: 0 auto;
+    background: black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav i:hover{
+    color: #e84118;
+}
+.nav h1{
+    color: blanchedalmond;
+    margin-right: 25px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.nav h1 a{
+    color: blanchedalmond;
+    margin: 5px;
+}
+.nav h1 a:hover{
+    color: #e84118;
+}
+.nav ul{
+    list-style-type: none;
+    float: right;
+    display:contents;
+    color: blanchedalmond;
+}
+.nav ul a{
+    text-decoration: none;
+    color: blanchedalmond;
+    margin: 10px;
+    font-size: large;
+}
+.nav ul a:hover{
+    color: #e84118;
+    border-color: blanchedalmond;
+    border: 1px solid;
+}
+
+/*Search Box in Navigation bar*/
+.search-box{
+    margin-top: 1.5%;
+}
+.search-box:hover{
+    background: white;
+    height: 40px;
+    border-radius: 40px;
+    margin-top: 0.5%;
+}
+.search-box:hover> .search-txt{
+    width: 200px;
+    padding: 0 15px;
+}
+.search-box:hover > .search-btn{
+    color: #e84118;
+    background: none;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+}
+.search-btn{
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 45%;
+    transition: 0.4s;
+    text-decoration: none;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color:black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+/*User Icon in navigation bar*/
+.nav ul .user:hover{
+    border: none;
+}
+
+/*For Drodown list in Navigation Bar (Destinatin & Category)*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:black;
+    min-width: 160px;
+    /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    /*z-index: 1;*/
+}
+.dropdown-content a {
+    /*color: black;*/
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: medium;
+}
+.dropdown-content a:hover {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+/*Destination page*/
+.countryName {
+    text-align: left;
+    /*margin-top: 15%;*/
+    margin-left: 10%;
+    padding-top: 8%;
+}
+.destination {
+    display: flex;
+    justify-content: space-between; 
+}
+.image-with-text {
+    width: 30%; /* Adjust as needed */
+    text-align: center;
+}
+.image-with-text img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 5%;
+}
+.image-with-text p {
+    margin-top: 10px;
+    color:black;
+    font-weight: bolder;
+}
+  
+/*Tour and Post cards*/
+.card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.card a img{
+    width: 300px;
+    height: 250px;
+    border-radius: 5%;
+} 
+
+/*India page Arrow*/
+.arrow{
+    cursor: pointer;
+    margin-right: 55%;
+    color: blanchedalmond;
+    border: 1px solid black;
+    background-color: black;
+    border-width: 7%;
+    font-size: larger;
+}

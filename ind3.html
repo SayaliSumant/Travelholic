@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/9d3905e2b8.js" crossorigin="anonymous"></script>
+
+    <title>Destinations &bull; India</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+</head>
+
+<body>
+    
+<!--NAVIGATION BAR-->    
+<div>
+    <nav role="navigation" class="nav">
+        <a href="./index2.html" style="font-size: xx-large; padding-top: 5px; margin-right: 1%; color: blanchedalmond;" class="heading">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+        </a>
+        <h1 class="heading" style="font-weight: bolder; font-size: xx-large;">
+            Travelholic
+        </h1>
+        <h3 class="heading">Around the World</h3>
+        <ul>
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="Budget.html">Budget Estimation</a></li>
+            <li class="dropdown">
+                <a href="destination.html">Destinations <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="destination.html#america"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>America</a>
+                    <a href="destination.html#asia"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Asia</a>
+                    <a href="destination.html#europe"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Europe</a>
+                    <a href="destination.html#middleeast"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Middle East</a>
+                    <a href="destination.html#oceania"><i class="fa-solid fa-earth-americas" style="margin-right: 2px;"></i>Oceania</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="categories.html">Category <i class="fa fa-caret-down" style="margin-left: 2px;"></i></a>
+                <div class="dropdown-content" align="left">
+                    <a href="categories.html#beaches">Beaches</a>
+                    <a href="categories.html#hikes">Hikes</a>
+                    <a href="categories.html#volcanoes">Volcanoes</a>
+                    <a href="categories.html#waterfalls">Waterfalls</a>
+                    <a href="categories.html#wildlife">Wildlife</a>
+                </div>
+            </li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact us.html">Contact</a></li>
+            <li class="search-box"><input class="search-txt" type="text" placeholder="Where are you going?" id="stxt">
+                <a class="search-btn" id="sbtn"><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></i></a>
+            </li>
+            <li><a class="user" href="#login"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+</div>
+
+<!--Info-->
+<div class="country">
+    <img src="https://wallpapercave.com/wp/wp4114673.jpg">
+    <h2>Best Beaches India</h2>
+    <p>India is fortunate to have a dream coastline that has some of the best beaches in the world. Just a click on the best beaches in India search and you are ready for the destination of your next vacation, such is the magic of the diverse collection of beautiful beaches in India.</p><br>
+    <h2>Here are the best beaches in India:</h2>
+</div>
+
+<!--List of Hikes-->
+<div id="trekList">
+    <div style="display: flex; flex-direction: row; margin-top: 4%;" align="center">
+        <div class="card" style="margin-left: 13%; cursor: pointer;">
+            <a onclick="displayTrek(1)" style="text-decoration: none; color: black;">
+            <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/baga_beach__north_go_QvVbp.jpg" style="width: 300px">
+            <h3>  Baga beach, Goa <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.8(226) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(2)" style="text-decoration: none; color: black;">
+            <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/radhanagar_beach__an_Qf2gk.jpg" style="width: 300px">
+            <h3> Radhanagar Beach – <br>Havelock Island, Andaman <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(33) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(3)" style="text-decoration: none; color: black;">
+            <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/colva_beach__south_g_nZiL2.jpg" style="width: 300px">
+            <h3> Colva Beach, South Goa <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.5(24) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row;" align="center">
+        <div class="card" style="margin-left: 13%; cursor: pointer;">
+            <a onclick="displayTrek(4)" style="text-decoration: none; color: black;">
+            <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/varkala_beach.jpg" style="width: 300px">
+            <h3> Varkala Beach, Kerala <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.6(39) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+       
+        <div class="card" style="margin-left: 3%; cursor: pointer;">
+            <a onclick="displayTrek(5)" style="text-decoration: none; color: black;">
+            <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/puri_beach__odisha.jpg" style="width: 300px">
+            <h3> Puri Beach, Odisha <br></h3>
+            <hr color="#e84118;">
+            <p align="center"> 
+                <i class="fa-solid fa-star" style="color: yellow;"></i> 4.9(22) <br> </p>
+            <a align="center" style="color: #e84118;">
+                Read more &raquo; </a>
+            </a>    
+        </div>
+    </div>
+</div>
+
+<!--Hikes info-->
+<div class="country" id="1" style="display: none;">
+    <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/baga_beach__north_go_QvVbp.jpg">
+    <h2>Baga beach, Goa</h2>
+    <p>Feel perky at the party hub of Goa, the Baga beach. This astounding beach is packed with vivid beach shacks and offers a spectrum of water sports. One of the most famous beaches in India, this beach characterized by its loud music, cheery ambiance and the exquisite views.</p><br><br>
+    <p><b>Best time to visit: </b>October to January</p><br><br>
+    <p><b>Things to do: </b>Watersports, relaxing at the beach shacks, partying with the lively night culture, shop at the nearby local markets</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7687.306125950993!2d73.7456186913787!3d15.556718490203508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfea1cd8a1deff%3A0xba7066c0ee35c1e0!2sBaga%20Beach!5e0!3m2!1sen!2sin!4v1710681660836!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><a onclick="displayList(1)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="2" style="display: none;">
+    <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/radhanagar_beach__an_Qf2gk.jpg">
+    <h2>Radhanagar Beach – Havelock Island, Andaman </h2>
+    <p>Being the best beach of Asia, the Radhanagar Beach is a sight to behold. The fine white sands and the light blue waters provide the perfect setting for rejuvenation. Commonly known as Beach No.7, this beach has a tourist footfall from around the world.</p><br><br>
+    <p><b>Best time to visit: </b>October to February</p><br><br>
+    <p><b>Things to do: </b>Take a walk on the pristine sands, relax and rejuvenate in solitude or with your loved ones.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15611.504775366408!2d92.93814949703831!3d11.983067661978593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3088d212164bb773%3A0x9715637d9a7265b3!2sRadhanagar%20Beach!5e0!3m2!1sen!2sin!4v1710681702774!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(2)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="3" style="display: none;">
+    <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/colva_beach__south_g_nZiL2.jpg">
+    <h2>Colva Beach, South Goa</h2>
+    <p>One of the largest and the oldest beaches of Goa, the Colva beach has much more to offer than clean waters and virgin sands. Popular for rave parties, the beach is the perfect hangout place for the people of all ages.</p><br><br>
+    <p><b>Best time to visit: </b>October to May</p><br><br>
+    <p><b>Things to do: </b>Venturing into water sports, enjoying the nightlife, unwinding by the sea.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15395.054699330543!2d73.90159074801733!3d15.280678314642339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfb418862d72a3%3A0xb5de1b202cad0935!2sColva%20Beach!5e0!3m2!1sen!2sin!4v1710681734064!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(3)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="4" style="display: none;">
+    <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/varkala_beach.jpg">
+    <h2>Varkala Beach, Kerala </h2>
+    <p>Sunbathing and swimming with the siding of impeccable views, is what the Varkala Beach of Kerala promises. Also known to have medicinal and curative properties, the waters at this beach are pristine and the views picturesque.</p><br><br>
+    <p><b>Best time to visit: </b>November to February</p><br><br>
+    <p><b>Things to do: </b>Relax at the beach, visit the nearby Hindu Temple, and Take a dip in the curative waters at the beach.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.5438207182856!2d76.70082452490563!3d8.734792291315259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05ef1c356e35d9%3A0x529a20f7e0453699!2sVarkala%20Beach!5e0!3m2!1sen!2sin!4v1710681768021!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(4)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+<div class="country" id="5" style="display: none;">
+    <img src="https://static-blog.treebo.com/wp-content/uploads/2017/12/puri_beach__odisha.jpg">
+    <h2>Puri Beach, Odisha</h2>
+    <p>Spectacular sunrises and sunsets are some of the best assets of the Puri beach in Odisha. White sands and clear waters of the beach further add to the glamour of the views. Known to be one of the most romantic beaches in India, this beach is ideal for holidays. You can also check out the famous places to visit in Puri while heading out to this beautiful beach.</p><br><br>
+    <p><b>Best time to visit: </b>November to February</p><br><br>
+    <p><b>Things to do: </b>Shop for handicrafts at the nearby markets, relax on the beach and enjoy the perfect sunrise and sunsets.</p><br><br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60064.894240946865!2d85.78808798530822!3d19.795227529924823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19c419b6847af9%3A0x4ae140e6a993c45e!2sGolden%20Beach!5e0!3m2!1sen!2sin!4v1710681805458!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+    <br><a onclick="displayList(5)" class="arrow"><b>&xlarr; Back</b></a>
+</div>
+
+<!--LOGIN BOX-->    
+<div class="loginForm" align="center" style="margin-left: 10%;" id="login">
+    <img src="./Loginform.jpg" class="img">
+    <ul class="loginContent">
+        <li><h1 id="head">Your Travel Journey Starts Here!!</h1></li>
+        <li><h3 id="info">Sign up now for travel tips, personalized itineraries, and <br> vacation inspiration straight 
+             to your inbox.</h3></li>
+        <li id="sId" class="eText"><input type="email" id="eid" placeholder="Email">
+            <i class="fa fa-envelope" aria-hidden="true" 
+            style="color:black; font-size: larger;"></i></li><br>
+        <li><a align="center" id="signButton" onclick="login()">Sign Up</a></li>
+    </ul>  
+</div> 
+
+<!--Footer Section-->
+<footer>
+    <ul style="margin-left: 20%;">
+        <li><a href="destination.html#america">America</a></li>
+        <li><a href="destination.html#asia">Asia</a></li>
+        <li><a href="destination.html#middleeast">Middle East</a></li>
+        <li><a href="destination.html#europe">Europe</a></li>
+        <li><a href="destination.html#oceania">Oceania</a></li>
+    </ul>
+    <ul>
+        <li><a href="categories.html#hikes">Hiking guides</a></li>
+        <li><a href="destination.html">Country Guides</a></li>
+        <li><a href="categories.html#beaches">Beach Guides</a></li>
+        <li><a href="categories.html#wildlife">Wildlife Sancturies</a></li>
+    </ul>
+    <ul>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
+    </ul>
+   
+    <div>
+        <h4>Join Us</h4>
+        <a href="https://www.facebook.com/" target="_blank" style="margin-left: 1%;"><i class="fa fa-facebook-square" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a>
+        <a href="https://www.gmail.com/" target="_blank"><i class="fa fa-envelope" aria-hidden="true" 
+            style="color: blanchedalmond; font-size: larger;"></i></a><br>
+    </div>
+    <p>&copy; 2024 Travelholic</p>
+</footer>
+
+</body>
+</html>
